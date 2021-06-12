@@ -1,0 +1,4 @@
+# hidden
+menuconfig LIBSMOLTCP
+        bool "smolTCP - a Rust TCP/IP stack"
+        default n
