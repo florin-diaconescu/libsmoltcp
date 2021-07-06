@@ -39,5 +39,8 @@
 ################################################################################
 $(eval $(call addlib_s,libsmoltcp,$(CONFIG_LIBSMOLTCP)))
 
+# Suppress flags
+LIBSMOLTCP_SUPPRESS_FLAGS += -Wno-unused-function
+
 LIBSMOLTCP_SRCS-y += $(LIBSMOLTCP_BASE)/smoltcp.c
 UK_ALIBS-$(CONFIG_LIBSMOLTCP) += $(LIBSMOLTCP_BASE)/libsmoltcp_c_interface.a

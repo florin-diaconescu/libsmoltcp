@@ -151,6 +151,7 @@ void uknetdev_output_wrapper (struct PacketInfo packet) {
 	uknetdev_output(dev, nb);
 }
 
+#if CONFIG_SMOLTCP_UKNETDEV
 static int libsmoltcp_init() {
     struct uk_alloc *a;
 
@@ -218,3 +219,4 @@ static int libsmoltcp_init() {
 }
 
 uk_lib_initcall(libsmoltcp_init);
+#endif

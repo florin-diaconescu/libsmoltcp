@@ -7,3 +7,10 @@ menuconfig LIBSMOLTCP
 	select LIBCXXABI
 	select LIBRUST
 	select LIBMUSL
+
+if LIBSMOLTCP
+config SMOLTCP_UKNETDEV
+	bool "Use Unikraft Netdev Ethernet (libuknetdev)"
+	default n
+	select LIBUKNETDEV
+endif
