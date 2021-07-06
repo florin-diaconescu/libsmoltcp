@@ -1,4 +1,9 @@
-# hidden
 menuconfig LIBSMOLTCP
-        bool "smolTCP - a Rust TCP/IP stack"
-        default n
+	bool "smolTCP - a Rust TCP/IP stack"
+	default n
+	select LIBCOMPILER_RT
+	select LIBUNWIND
+	select LIBCXX
+	select LIBCXXABI
+	select LIBRUST
+	select LIBMUSL
